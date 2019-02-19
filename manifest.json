@@ -1,0 +1,23 @@
+{
+     "manifest_version": 2,
+     "name": "扇贝听力无限提示",
+     "version": "1.0",
+     "description": "扇贝听力无限提示",
+
+     "browser_action": {
+         
+     },
+	 "permissions": [
+		"https://www.shanbay.com/listen/*"
+	],
+	"background": {
+	},
+	"content_scripts": [
+		{
+			"matches":["https://www.shanbay.com/listen/*"],
+			"js":["jquery-1.7.2.min.js","sbtlwxts.js"],
+			"run_at":"document_end",
+			"all_frames":true
+		}
+	]
+}
